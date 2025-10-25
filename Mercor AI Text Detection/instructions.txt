@@ -1,0 +1,222 @@
+Overview
+Welcome to Mercor AI Text Detection, a research-focused competition hosted by Mercor Inc.
+The goal of this competition is to advance the study of AI-generated text detection in writing assessments. Participants are challenged to develop models that can distinguish between genuine human writing and inauthentic or AI-assisted text.
+
+With the increasing accessibility of large language models, verifying the authenticity of written work has become an important technical and social problem. This competition provides a controlled benchmark dataset to evaluate the effectiveness of various approaches to detecting such inauthentic text.
+
+Make an account and fill out the submission form in addition to submitting via Kaggle. Submission of this form is required to be eligible for a prize.
+
+Start
+
+17 days ago
+Close
+22 days to go
+Description
+You are tasked with predicting whether a writing sample represents cheating behavior (is_cheating):
+
+0 = Not cheating (authentic human writing)
+1 = Cheating (AI-generated, copy-pasted, or otherwise inauthentic)
+Submissions will be evaluated using the Area Under the Receiver Operating Characteristic Curve (ROC-AUC) between your predicted probabilities and the true labels.
+The dataset includes anonymized writing samples from a standardized writing task.
+Each response includes:
+
+id: Unique identifier for each sample
+topic: The topic chosen by the writer
+answer: The written response
+is_cheating: Binary label (included only in the training set)
+The training set contains labeled samples, while the test set contains only features.
+Participants must submit a file of predicted probabilities for the is_cheating field for each id in the test set.
+
+Evaluation
+Submissions are scored on ROC-AUC, measuring how well your model separates legitimate and inauthentic writing.
+
+Higher scores indicate stronger discrimination between real and fake writing.
+The final rankings will be based on the private leaderboard, comprising 70% of the test data.
+The public leaderboard uses the remaining 30%.
+Prizes
+First Place – $1,000
+Second Place – $500
+Third Place – $300
+Fourth Place – $150
+Fifth Place – $50
+
+You must create an account on the Mercor platform to receive your prize. Successful competitors will also be eligible for full-time opportunities with Mercor. Please make sure to fill out the submission form in order to be eligible for a prize.
+
+Citation
+Aditya Bhandari 25 and Peter Zhang. Mercor AI Text Detection. https://kaggle.com/competitions/mercor-ai-detection, 2025. Kaggle.
+
+
+Dataset Description
+Files
+train.csv – the training set containing labeled writing samples. Each entry includes a short written response and its associated label indicating whether it represents authentic or inauthentic writing.
+test.csv – the test set containing unlabeled writing samples. Participants must generate predictions for these entries.
+sample_submission.csv – a sample submission file illustrating the correct format for predictions.
+Columns
+id – unique identifier for each writing response (e.g., scr_81822029c661).
+
+topic – the writing topic or theme chosen by the writer.
+
+answer – the written response itself, typically between 50 and 300 words in length.
+
+is_cheating – the target variable (present only in train.csv).
+
+0 = authentic writing
+1 = inauthentic or AI-assisted writing
+Data Format and Structure
+Each row in the dataset represents a single writing response created in response to an open-ended writing task.
+Responses vary in topic, tone, and length, encompassing several domains such as fiction, non-fiction, marketing/social, and film/screenwriting.
+
+The training set provides both inputs and ground truth labels, while the test set contains only the features (id, topic, and answer). Participants must predict the probability that each test sample represents inauthentic writing.
+
+Predictions are evaluated using ROC-AUC, comparing predicted probabilities against the true labels in the hidden solution file.
+
+Files
+3 files
+
+Size
+633.21 kB
+
+Type
+csv
+
+License
+Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+
+sample_submission.csv(5.03 kB)
+
+2 of 2 columns
+
+
+id
+
+is_cheating
+264
+
+unique values
+Label	Count
+0.00 - 0.00	264
+0
+0
+scr_81822029c661
+0
+scr_52efb19e0ea9
+0
+scr_8fc0f33c559e
+0
+scr_bac3f5d3aa12
+0
+scr_adfbe009984d
+0
+scr_9e08ece19277
+0
+scr_0e34514f3cd4
+0
+scr_b10d808b5528
+0
+scr_2024f1e7bf94
+0
+scr_aa0b11f10fff
+0
+scr_ca7ad6cc2c42
+0
+scr_9607f7966137
+0
+scr_7b3de9cd957f
+0
+scr_4954110bd27a
+0
+scr_e9dcb4a26a5c
+0
+scr_371dd109f0a7
+0
+scr_475ef262cf9b
+0
+scr_dc7b0c899486
+0
+scr_077aa5e27cc7
+0
+scr_cc6fc69de236
+0
+scr_444cbdc27f94
+0
+scr_0c434acf9c4d
+0
+scr_89f152bc3cec
+0
+scr_6d58ee286a55
+0
+scr_8a223783259f
+0
+scr_d783b1a1e157
+0
+scr_df48c26f4924
+0
+scr_81d92f0c9275
+0
+scr_30091540e7d3
+0
+scr_96f1e1d2d6cf
+0
+scr_0af56cfdf150
+0
+scr_c89473196139
+0
+scr_edb66c857b9b
+0
+scr_6838f4b49b0d
+0
+scr_d4e96957f9ca
+0
+scr_bced0720cee5
+0
+scr_ab0e8d325fcc
+0
+scr_1f74968ee0ab
+0
+scr_0402e80cbda7
+0
+scr_614f063e193c
+0
+scr_cbab8e98a5a1
+0
+scr_c422783a3a2f
+0
+scr_5888963619c1
+0
+scr_90e4db23a0ec
+0
+scr_30e872975dc3
+0
+scr_6cb3f20dbe6f
+0
+scr_4804e5852948
+0
+scr_3046e0b6677c
+0
+scr_b64482fcd42e
+0
+scr_9b173b5fb714
+0
+Data Explorer
+633.21 kB
+
+sample_submission.csv
+
+test.csv
+
+train.csv
+
+Summary
+3 files
+
+9 columns
+
+
+Download All
+kaggle competitions download -c mercor-ai-detection
+Download data
+
+Metadata
+License
+Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+
